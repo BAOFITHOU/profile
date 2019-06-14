@@ -8,7 +8,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-      <script src="assets/style.js"></script>
+      <script src="assets/style.js"> $('.carousel').carousel()</script>
       <script src="assets/js/jquery-2.1.4.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -138,14 +138,32 @@
               <div class="tab-pane active text-center gallery" id="works">
                 <div class="row">
                   <div class="col-md-4">
-                    <ol class="text-left">
-                      <li><h4>Quê quán: Bắc Giang</h4></li>
-                      <li><h4>VCB: 0301000384808</h4></li>
-                      <li><h4>Địa chỉ Email: Baonguyen091099@gmail.com</h4></li>
-                      <li>MIACC: 1742152789</li>
-                      <li><h4>Ngày sinh: 09-10-1999</h4></li>
-                      <li><h4>Sinh viên Khoa CNTT<br>Đại học Mở Hà Nội</h4></li>
-                    </ol>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="assets/images/FFC.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="assets/images/FMC.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="assets/images/FMCFVC.jpg" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
                   </div>
                   <div class="col-md-4">
                         <p> Bài này chill phết - Đen </p>
