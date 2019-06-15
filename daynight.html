@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/daynight.css">
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <title>Day night</title>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <p id="info">Xin chào...</p>
+            <div class="time-circle">
+                <div class="sun"></div>
+                <div class="moon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="stars">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="water"></div>
+            </div>
+            <div id="intro-text">
+                <h1 href="#" id="time"></h1>
+                <h1 href="#" id="status">Ấn nút cái</h1>
+                <h4></h4>
+            </div>
+            <div id="switch">
+                <div id="circle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+$( document ).ready(function() {
+    $("#switch").click(function () {
+    var dt = new Date();
+    var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    $("#time").html(time);
+    if ($("#fullpage").hasClass("night")) {
+        $("#fullpage").removeClass("night");
+        $("#switch").removeClass("switched");
+        $("#status").html("Đi ngủ nào");
+    }
+    else {
+        $("#fullpage").addClass("night");
+        $("#switch").addClass("switched");
+        $("#status").html("Dậy thôi");
+    }
+    });
+});
+</script>
+
+</html>
